@@ -1,0 +1,215 @@
+@import "mixins.scss";
+
+// Breakpoints
+/* stylelint-disable unit-whitelist */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1199.98px,
+  xxl: 1399.98px,
+) !default;
+
+/* stylelint-enable unit-whitelist */
+
+// Directions
+$lrf: false !default;
+$left: left !default;
+$right: right !default;
+
+// Colors
+$primary: #000000;
+$secondary: #002a5c;
+$third: #a29061;
+$black: #000000;
+$white: #ffffff;
+$gray: #d9d9d9;
+$gray-text: #8190A1;
+$body-text-color: #555;
+$header-color: #f6f6f6;
+$yellow: #fec606;
+$heading-color: #444;
+$section-bg: #F4F5F5;
+
+// Typography
+$f-family-base: 'Poppins', sans-serif;
+$f-weight-light: 300 !default;
+$f-weight-regular: 400 !default;
+$f-weight-medium: 500 !default;
+$f-weight-semi-bold: 600 !default;
+$f-weight-bold: 700 !default;
+$f-weight-extra-bold: 800 !default;
+$f-weight-bolder: 800 !default;
+
+
+// Font Sizes
+$f-size-base: 1rem !default; // 16px
+$f-size--1: ($f-size-base - 0.0625) !default; // 15px
+$f-size--2: ($f-size-base - 0.125) !default; // 14px
+$f-size--3: ($f-size-base - 0.1875) !default; // 13px
+$f-size--4: ($f-size-base - 0.25) !default; // 12px
+$f-size--5: ($f-size-base - 0.3125) !default; // 11px
+$f-size--6: ($f-size-base - 0.375) !default; // 10px
+$f-size--7: ($f-size-base - 0.4375) !default; // 9px
+$f-size--8: ($f-size-base - 0.5) !default; // 8px
+$f-size-1: ($f-size-base + 0.0625) !default; // 17px
+$f-size-2: ($f-size-base + 0.125) !default; // 18px
+$f-size-4: ($f-size-base + 0.25) !default; // 20px
+$f-size-6: ($f-size-base + 0.375) !default; // 22px
+$f-size-8: ($f-size-base + 0.5) !default; // 24px
+$f-size-12: ($f-size-base + 0.75) !default; // 28px
+$f-size-14: ($f-size-base + 0.875) !default; // 30px
+$f-size-16: ($f-size-base + 1) !default; // 32px
+$f-size-18: ($f-size-base + 1.125) !default; // 34px
+$f-size-19: ($f-size-base + 1.1875) !default; // 35px
+$f-size-20: ($f-size-base + 1.25) !default; // 36px
+$f-size-22: ($f-size-base + 1.375) !default; // 38px
+$f-size-26: ($f-size-base + 1.625) !default; // 42px
+$f-size-32: ($f-size-base + 2) !default; // 48px
+$f-size-52: ($f-size-base + 3.5) !default; // 68px
+
+
+// Typography
+$f-size-h1: $f-size-20 !default;
+$f-size-h2: $f-size-16 !default;
+$f-size-h3: $f-size-12 !default;
+$f-size-h4: $f-size-8 !default;
+$f-size-h5: $f-size-4 !default;
+$f-size-h6: $f-size-2 !default;
+
+$h-margin: 0px 0px 20px 0px; // all heading margin
+
+
+
+
+// Content Settings
+
+// header
+$header-bg-color: #ffffff;
+$header-sticky-bg: #001D3B;
+
+$header-menu-f-size: 16px;
+$header-menu-f-color:$secondary;
+$header-menu-f-weight: 400;
+$header-menu-f-family: $f-family-base;
+$header-submenu-f-size: 16px;
+$header-submenu-f-color: $secondary;
+$header-submenu-bg-color: $white;
+
+
+$header-padding: 30px 0px;
+$header-height: 76px;
+$header-height-md: 76px;
+
+
+
+$content-wrap-padding: 80px 0px;
+$section-padding: 80px 0;
+$section-margin: 80px 0;
+
+// Heading Block
+
+$heading-block-label-f-size: 24px;
+$heading-block-label-f-weight: bold;
+$heading-block-label-f-color:#9B9A9A;
+$heading-block-title-f-size:42px;
+$heading-block-title-f-weight:bold;
+$heading-block-title-f-color:#042245;
+
+
+// ? Slider
+$slider-title-f-size: $f-size-52;
+$slider-title-f-color: $black;
+$slider-title-f-weight: $f-weight-bold;
+
+$slider-subtitle-f-size: $f-size-12;
+$slider-subtitle-f-color: $black;
+$slider-subtitle-f-weight: $f-weight-bold;
+
+
+$slider-height: 720px;
+$slider-height-md: 480px;
+$slider-height-lg: 630px;
+
+
+// Button
+
+$button-primary-bg-color: $black;
+$button-primary-text-color: $white;
+
+$button-secondary-bg-color: $black;
+$button-secondary-text-color: $white;
+
+$button-f-size: $f-size-1;
+$button-f-weight: $f-weight-bold;
+
+$button-f-size-md: $f-size--2;
+
+$button-padding: 10px 20px;
+$button-border-radius: 8px;
+
+$button-border-line-color:$black;
+$button-border-line-size:1px;
+
+
+// Side Panel
+$side-panel-bg-color: $black;
+$side-panel-text-color: $white;
+
+$side-panel-title-color: $white;
+$side-panel-title-f-size: $f-size-1;
+
+$side-panel-menu-text-color: $black;
+$side-panel-menu-f-size: $f-size-1;
+
+$side-panel-submenu-text-color: $black;
+$side-panel-submenu-f-size: $f-size-1;
+
+
+$side-panel-padding: 0px 30px;
+$side-panel-width: 30%;
+
+
+// Forms
+
+$input-label-f-size: $f-size-1;
+$input-label-f-color: $black;
+$input-label-f-weight: $f-weight-bold;
+$input-label-f-family: $f-family-base;
+
+$input-border-color: #ffffff;
+$input-text-color: #000000;
+$input-bg-color: $white;
+$input-f-size: $f-size-1;
+$input-border-radius: 4px;
+$input-width: 100%;
+$input-padding: 0px 20px;
+
+$text-area-border-color: $white;
+$text-area-text-color: $black;
+$text-area-bg-color: $white;
+$text-area-f-size: $f-size-1;
+$text-area-border-radius: 4px;
+$text-area-width: 100%;
+$text-area-padding: 0px 20px;
+
+$select-f-size: $f-size-1;
+$select-f-color: $black;
+$select-f-weight: $f-weight-bold;
+$select-border-color: $black;
+$select-border-radius: 4px;
+$select-width: 100%;
+$select-padding: 8px 12px;
+
+// Breadcrumb
+
+$breadcrumb-f-size: $f-size-1;
+$breadcrumb-f-color: $white;
+$breadcrumb-title-f-size: $f-size-1;
+$breadcrumb-title-color: $f-size-2;
+
+// Footer
+
+$footer-menu-f-size: $f-size--2;
+$footer-menu-f-color: $black;

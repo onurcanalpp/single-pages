@@ -1,0 +1,277 @@
+// We write all scss codes related to website content here
+@import "variables.scss";
+body{
+    background:#d9d9d9;
+}
+
+
+#header{
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+    background:$white;
+    border-bottom:1px solid $gray;
+    height:80px;
+    &:after{
+        content:'';
+        left:0px;
+        top:0px;
+        width:0px;
+        height:100%;
+        position:absolute;
+        background-color:$yellow;
+        z-index:2;
+        transition:all ease .5s;
+    }
+    &.active{
+        &:after{
+            width:100%;
+        }
+        .logo{
+            span{
+                color:$primary!important;
+                transition:all ease .5s;
+            }
+        }
+        .map{
+            a{
+                color:$yellow!important;
+                transition:all ease .5s;
+            }
+        }
+    }
+    .burger{
+        position:relative;
+        flex-direction:column;
+        justify-content:center;
+        cursor:pointer;
+        display:none;
+        background-color:$primary;
+        padding:0px 20px;
+        .line{
+            width:26px;
+            height:2px;
+            background-color:$white;
+            margin:3px 5px;
+            transition-duration:.5s;
+            &:last-child{
+                width:13px;
+                height:2px;
+                background-color:$white;
+            }
+        }
+        @include lg{
+            display:flex;
+        }
+        &.active{
+            .line{
+                background-color:$yellow;
+                &:last-child{
+                    width:26px;
+                }
+            }
+        }
+    }
+    .left-side{
+        display:flex;
+        z-index:3;
+        .map{
+            width:80px;
+            background:$primary;
+            height:100%;
+            display:flex;
+            text-align:center;
+            align-items:center;
+            justify-content:center;
+            font-size:$f-size-12;
+            a{
+                color:$white;
+                transition:all ease .5s;
+            }
+        }
+        .logo{
+            margin:0px 30px;
+            display:flex;
+            line-height:1.1;
+            justify-content:center;
+            font-weight:bold;
+            font-size:$f-size-4;
+            flex-direction:column;
+            
+            span{
+                color:$secondary;
+                transition:all ease .5s;
+            }
+        }
+        .header-menu{
+            list-style: none;
+            display: flex;
+            margin-bottom:0px;
+            
+            li{
+                margin:0px 8px;
+                display:flex;
+                position:relative;
+                height:100%;
+                align-items: center;
+                a{
+                    color:$primary;
+                    font-weight:bold;
+                    font-size:$f-size--2;
+                    transition-duration:.5s;
+                    &:hover{
+                        color:$yellow;
+                        transition-duration:.5s;
+                    }
+                }
+                
+                &.active{
+                    .mega-menu{
+                        transform:translate(0%, 100%);
+                        transition:all ease .5s;
+                        @include xxl{
+                            transform:translate(-10%, 100%);
+                        }
+                        @include xl{
+                            transform:translate(-20%, 100%);
+                        }
+                    }  
+                }
+            }
+            @include lg{
+                display:none;
+            }
+        }
+    }
+    .right-side{
+        display:flex;
+        z-index:3;
+        .search-form{
+            display:flex;
+            input{
+                height: 100%;
+                border: none;
+                border-left: 1px solid $gray;
+                padding: 20px 20px;
+                outline: 0;
+                &::placeholder{
+                    color:$secondary;
+                    font-size:$f-size--2;
+                }
+            }
+            @include lg{
+                display:none;
+            }
+        }
+        .search{
+            display:none;
+            align-items:center;
+            padding:0px 30px;
+            background:#4E4E4E;
+            color:$white;
+            font-size:$f-size--2;
+            font-weight:bold;
+            text-align:center;
+            @include lg{
+                display:flex;
+                background:$primary;
+            }
+            @include md{
+                display:none;
+            }
+        }
+        .add-listing{
+            display:flex;
+            align-items:center;
+            padding:0px 30px;
+            background:#4E4E4E;
+            color:$white;
+            font-size:$f-size--2;
+            font-weight:bold;
+            text-align:center;
+            cursor:pointer;
+            i{
+                margin-right:5px;
+            }
+            @include lg{
+                background:$primary;
+                span{
+                    display:none;
+                }
+                i{
+                    margin-right:0px;
+                }
+            }
+            @include md{
+                display:none;
+            }
+        }
+        .user-panel{
+            width:70px;
+            background:$primary;
+            height:100%;
+            display:flex;
+            text-align:center;
+            align-items:center;
+            justify-content:center;
+            font-size:$f-size-2;
+            cursor:pointer;
+            a{
+                color:$white;
+            }
+            @include md{
+                display:none;
+            }
+        }
+    }
+}
+
+
+.product-cards{
+    .card-item{
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:center center;
+        min-height:350px;
+        position:relative;
+        display:flex;
+        align-items:flex-end;
+        cursor:pointer;
+        overflow:hidden;
+        margin-bottom:30px;
+        &:before{
+            content:'';
+            position:absolute;
+            left:0px;
+            bottom:0px;
+            background-color:rgba(0,0,0,0.2);
+            width:100%;
+            height:100%;
+            transform:translateY(50%);
+            transition:all ease .5s;
+        }
+        &:hover{
+            &:before{
+                transform:translateY(0);
+            }
+        }
+        .card-content{
+            position:relative;
+            z-index:2;
+            padding:30px 30px;
+            width:100%;
+            h3{
+                color:#ffffff;
+                font-size:$f-size-12;
+                font-weight:600;
+                margin-bottom:0px;
+            }
+            p{
+                margin-bottom:0px;
+            }
+        }
+        color:#ffffff;
+        
+    }
+
+}
